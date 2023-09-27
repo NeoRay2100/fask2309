@@ -6,13 +6,6 @@ app = Flask(__name__)
 def hello():
     return '<h1>Hello Totoro!</h1><img src="http://helloflask.com/totoro.gif">'
 
-@app.route("/user/<name>")
+@app.route("/user/")
 def u1(name):
-    return f"{name}"
-
-
-from markupsafe import escape
-
-@app.route("/user2/<name>")
-def u2(name):
-    return f"User: {escape(name)}"
+    return "<ray>"

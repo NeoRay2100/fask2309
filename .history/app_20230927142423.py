@@ -11,8 +11,4 @@ def u1(name):
     return f"{name}"
 
 
-from markupsafe import escape
-
-@app.route("/user2/<name>")
-def u2(name):
-    return f"User: {escape(name)}"
+from marksafe import escape

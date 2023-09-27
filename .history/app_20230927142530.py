@@ -13,6 +13,6 @@ def u1(name):
 
 from markupsafe import escape
 
-@app.route("/user2/<name>")
+@app.route("/user2/<>")
 def u2(name):
     return f"User: {escape(name)}"
