@@ -9,17 +9,17 @@
 </head>
 <body>
     <h2>
-        <img class= "avatar "src="{{ url_for('static', filename='/images/avatar.png')}}" alt="Avatar">
+        <img class= src="{{ url_for('static', filename='/images/avatar.png')}}" alt="Avatar">
         {{ name }}`s watchlist</h2>
     {# len #}
     <p>{{ movies|length }} titles </p>
-    <ul class="movie-list">
+    <ul>
         {% for movie in movies %} {# iter #}
         <li>{{ movie.title }} - {{ movie.year }}</li>
         {% endfor %}
     </ul>
 
-    <img class="totoro" src="{{ url_for('static', filename='images/totoro.gif')}}" alt="Walking Totoro">
+    <img src="{{ url_for('static', filename='images/totoro.gif')}}" alt="Walking Totoro">
     <footer>
         <small>copy: 2023 <a href="https://ray2100.oss-cn-beijing.aliyuncs.com/img/w1_clear.png"></a></small>
     </footer>

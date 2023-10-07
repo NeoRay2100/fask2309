@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="icon" href="{{ url_for('static', filename='test.ico')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
 </head>
 <body>
     <h2>
-        <img class= "avatar "src="{{ url_for('static', filename='/images/avatar.png')}}" alt="Avatar">
-        {{ name }}`s watchlist</h2>
+        <img src="{{ url_for('static', filename='/images/avatar.png')}}" alt="Avatar">
+        {{ name }}
+
+    </h2>
+    
+    <h2>{{ name }}`s watchlist</h2>
     {# len #}
     <p>{{ movies|length }} titles </p>
-    <ul class="movie-list">
+    <ul>
         {% for movie in movies %} {# iter #}
         <li>{{ movie.title }} - {{ movie.year }}</li>
         {% endfor %}
     </ul>
-
-    <img class="totoro" src="{{ url_for('static', filename='images/totoro.gif')}}" alt="Walking Totoro">
     <footer>
         <small>copy: 2023 <a href="https://ray2100.oss-cn-beijing.aliyuncs.com/img/w1_clear.png"></a></small>
     </footer>
