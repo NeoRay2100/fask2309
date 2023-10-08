@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>{{ movies|length}} Titles </p>
+<ul class="movie-list">
+    {% for movie in movies %}
+    <li>
+        {{movie.title}}
+    </li>
+</ul>

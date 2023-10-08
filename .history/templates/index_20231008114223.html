@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>{{ movies|length}} Titles </p>
+<ul class="movie-list">
+    {% for movie in movies %}
+    <li>
+        {{movie.title}}-{{movie.year}}
+        <span class="float-right">
+            <a href="https://www.imdb.com/find?q={{ movie.title }}" class="imdb" target="_blank" title="Find this movie on IMDb">IMDB</a>
+        </span>
+    </li>
+    {}
+</ul>
